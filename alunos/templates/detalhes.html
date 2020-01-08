@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h3>{{aluno.nome}}</h3>
+    <p>Idade {{aluno.idade}} anos</p>
+    <p>Genero {{aluno.genero}}</p>
+    <p>Nome da Mãe: {{aluno.nome_mae}}</p>
+    <p>Endereço: {{aluno.endereco}}</p>
+    <p>Telefone de contato: {{aluno.telefone_contato}}</p>
+    <a href="/atualizar/aluno/{{aluno.pk}}"><button>Atualizar Cadastro</button></a>
+    <a href="/deletar/aluno/{{aluno.pk}}"><button style="background-color: brown;">Deletar Aluno</button></a>
+    {% if msg%}
+        <h2>{{msg}}</h2>
+    {% endif %}
+{% endblock body %}

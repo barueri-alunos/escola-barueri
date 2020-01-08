@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% for aluno in lista_alunos %}
+    <h4>{{aluno.nome}}</h4>
+    <p>Idade {{aluno.idade}} anos</p>
+    <p>Telefone: {{aluno.telefone_contato}}</p>
+    <a href="/aluno/{{aluno.pk}}"><button>Detalhes do Aluno</button></a>
+    {% endfor %}
+{% endblock body %}
